@@ -1,17 +1,38 @@
 import Layout from '../components/MyLayout.js'
 import Clock from '../components/clock.js'
+import Ilm from '../components/ilm.js'
 import Link from 'next/link'
 import fetch from 'isomorphic-unfetch'
 
 const Index = (props) => (
   <Layout>
-    <h1>Tuul Pärnus</h1>
-    <ul>
-    <li>Kiirus:  {props.shows.wind.speed}</li>
-    <li>Suund: {props.shows.wind.deg}</li>
-    <li>Temperatuur: {Math.round(props.shows.main.temp) -273}</li>
-    </ul>
+    <div>
+    <style jsx>{`
+      @font-face {
+  font-family: 'Aino';
+  font-style: normal;
+  font-weight: 300;
+
+
+  src: local('Aino'), local('Aino'),
+
+       url('../assets/assets/AinoHeadline.ttf') format('truetype'), /* Safari, Android, iOS */
+
+}
+.kell {
+font-family: 'Aino';
+font-size: 6em;
+}
+
+`}</style>
+
+
+    Kiirus:  {props.shows.wind.speed}
+    Suund: {props.shows.wind.deg}
+    Temperatuur: {Math.round(props.shows.main.temp) -273}
+</div>
     <Clock/>
+    <Ilm/>
   </Layout>
 
 )
