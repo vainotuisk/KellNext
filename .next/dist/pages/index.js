@@ -63,10 +63,15 @@ var Index = function Index(props) {
       fileName: _jsxFileName,
       lineNumber: 11
     }
-  }, 'Suund: ', props.shows.wind.deg)), _react2.default.createElement(_clock2.default, {
+  }, 'Suund: ', props.shows.wind.deg), _react2.default.createElement('li', {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 12
+    }
+  }, 'Temperatuur: ', Math.round(props.shows.main.temp) - 273)), _react2.default.createElement(_clock2.default, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14
     }
   }));
 };
@@ -87,14 +92,11 @@ Index.getInitialProps = (0, _asyncToGenerator3.default)(_regenerator2.default.ma
 
         case 5:
           data = _context.sent;
-
-          console.log('Show data fetched. Count: ' + data.length);
-
           return _context.abrupt('return', {
             shows: data
           });
 
-        case 8:
+        case 7:
         case 'end':
           return _context.stop();
       }

@@ -9,6 +9,7 @@ const Index = (props) => (
     <ul>
     <li>Kiirus:  {props.shows.wind.speed}</li>
     <li>Suund: {props.shows.wind.deg}</li>
+    <li>Temperatuur: {Math.round(props.shows.main.temp) -273}</li>
     </ul>
     <Clock/>
   </Layout>
@@ -19,7 +20,7 @@ Index.getInitialProps = async function() {
   const res = await fetch('http://api.openweathermap.org/data/2.5/weather?q=Parnu&appid=312148cec8dfac78058217072b44201e')
   const data = await res.json()
 
-  console.log(`Show data fetched. Count: ${data.length}`)
+//  console.log(`Show data fetched. Count: ${data.length}`)
 
   return {
     shows: data
