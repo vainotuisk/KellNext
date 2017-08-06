@@ -3,6 +3,7 @@ export default class Ilm extends React.Component {
 
   constructor(props) {
     super(props);
+
     this.state = {date: new Date()};
   }
 
@@ -38,7 +39,7 @@ export default class Ilm extends React.Component {
            url('../assets/assets/AinoHeadline.ttf') format('truetype'), /* Safari, Android, iOS */
 
     }
-    .kell {
+    .ilm {
   font-family: 'Aino';
   font-size: 6em;
 }

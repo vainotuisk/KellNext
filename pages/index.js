@@ -1,6 +1,8 @@
+import React from 'react'
 import Layout from '../components/MyLayout.js'
 import Clock from '../components/clock.js'
 import Ilm from '../components/ilm.js'
+import Weather from '../components/weather.js'
 import Link from 'next/link'
 import fetch from 'isomorphic-unfetch'
 
@@ -27,12 +29,12 @@ font-size: 6em;
 `}</style>
 
 
-    Kiirus:  {props.shows.wind.speed}
+    Kiirus:  {Math.round(props.shows.wind.speed)}
     Suund: {props.shows.wind.deg}
     Temperatuur: {Math.round(props.shows.main.temp) -273}
 </div>
     <Clock/>
-    <Ilm/>
+
   </Layout>
 
 )
