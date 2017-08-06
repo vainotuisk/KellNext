@@ -1,4 +1,6 @@
+import Head from 'next/head'
 import Header from './Header'
+import { Container } from 'reactstrap'
 
 const layoutStyle = {
   margin: 20,
@@ -24,9 +26,15 @@ const Layout = (props) => (
 
     }
         `}</style>
-    
+    <Head>
+      <title>Infotabloo</title>
+      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" />
+    </Head>
+    <Container>
+      {props.children}
+    </Container>
 
-    {props.children}
   </div>
 )
 

@@ -5,35 +5,40 @@ import Ilm from '../components/ilm.js'
 import Weather from '../components/weather.js'
 import Link from 'next/link'
 import fetch from 'isomorphic-unfetch'
+import {Row, Col} from 'reactstrap'
 
 const Index = (props) => (
   <Layout>
-    <div>
+    <div className='kell'>
     <style jsx>{`
       @font-face {
   font-family: 'Aino';
   font-style: normal;
-  font-weight: 300;
+  font-weight: 100;
 
 
   src: local('Aino'), local('Aino'),
 
-       url('../assets/assets/AinoHeadline.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../assets/AinoHeadline.ttf') format('truetype'), /* Safari, Android, iOS */
 
 }
 .kell {
 font-family: 'Aino';
-font-size: 6em;
+font-size: 3em;
 }
 
 `}</style>
-
-
-    Kiirus:  {Math.round(props.shows.wind.speed)}
-    Suund: {props.shows.wind.deg}
-    Temperatuur: {Math.round(props.shows.main.temp) -273}
+    <Row>
+        <Col xs="6" sm="4">Kiirus:  {Math.round(props.shows.wind.speed)}m/s</Col>
+        <Col xs="6" sm="4">Suund: {props.shows.wind.deg}</Col>
+        <Col sm="4">Temp: {Math.round(props.shows.main.temp) -273} &deg;</Col>
+    </Row>
 </div>
-    <Clock/>
+    <Row>
+      <Col sm={{ size: 'auto', offset: 1 }}><Clock/></Col>
+    </Row>
+
+
 
   </Layout>
 

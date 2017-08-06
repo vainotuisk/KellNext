@@ -33,7 +33,7 @@ export default class Clock extends React.Component {
 
       src: local('Aino'), local('Aino'),
 
-           url('../assets/assets/AinoHeadline.ttf') format('truetype'), /* Safari, Android, iOS */
+           url('../assets/AinoHeadline.ttf') format('truetype'), /* Safari, Android, iOS */
 
     }
     .kell {
