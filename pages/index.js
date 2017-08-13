@@ -30,7 +30,7 @@ font-size: 3em;
 `}</style>
     <Row>
         <Col xs="6" sm="4">Kiirus:  {Math.round(props.shows.wind.speed)}m/s</Col>
-        <Col xs="6" sm="4">Suund: {props.shows.wind.deg}</Col>
+        <Col xs="6" sm="4">Suund: {Math.round(props.shows.wind.deg)}</Col>
         <Col sm="4">Temp: {Math.round(props.shows.main.temp) -273} &deg;</Col>
     </Row>
 </div>
